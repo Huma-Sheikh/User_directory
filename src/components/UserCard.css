@@ -1,0 +1,141 @@
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+  padding: 10px;
+  width: 280px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.glass-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background-color: black;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.glass-avatar-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  margin-bottom: 8px;
+}
+
+.glass-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.glass-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.glass-description {
+  color: #5a5050;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 240px;
+ 
+}
+
+.glass-join-info {
+  background: rgba(91, 83, 83, 0.06);
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: #060505;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.glass-join-label {
+  color: #121e20;
+  font-weight: 500;
+}
+
+.glass-btn {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #0f1212, #505654);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.glass-btn:hover {
+  background: linear-gradient(to right, #0f1212, #505654);
+}
+@media (max-width: 768px) {
+  .glass-card {
+    width: 90%;
+    height: auto;
+    padding: 16px;
+    margin: 12px auto;
+  }
+
+  .glass-avatar-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .glass-name {
+     font-size: clamp(16px, 5vw, 20px);
+    margin-bottom: 6px;
+  }
+
+  .glass-role {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+  }
+
+  .glass-description {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .glass-join-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .glass-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+}
