@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import UserCard from "./components/UserCard";
 import UserModal from "./components/UserModal";
 import NavBar from "./components/NavBar";
+import { User } from "./type";
+import { STRINGS } from "./utilis/string"; 
+import { filterUsersByRole } from "./utilis/functions"; 
+import { normalizeUser } from "./utilis/apiAdapter";
+import axios from "axios";
 import "./App.css";
-
-export interface User {
-  id: string;
-  username: string;
-  firstname: string;
-  lastname: string;
-  email: string;
-  avatar: string;
-  role: string;
-  join_date: string;
-  description: string;
-}
 
 const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -28,7 +20,8 @@ const App: React.FC = () => {
     axios
       .get("https://9e06da9a-97cf-4701-adfc-9b9a5713bbb9.mock.pstmn.io/users")
       .then((res) => {
-        const userList = res.data.data.users;
+        const rawUsers = res?.data?.data?.users || [];
+        const userList = rawUsers.map(normalizeUser);
         setUsers(userList);
       })
       .catch((err) => {
@@ -47,13 +40,7 @@ const App: React.FC = () => {
     setSelectedUser(null);
   };
 
-  const displayedUsers =
-    searchTerm.trim() === ""
-      ? users
-      : users.filter((user) => {
-          const regex = new RegExp(searchTerm, "i");
-          return regex.test(user.role?.toString() || "");
-        });
+  const displayedUsers = filterUsersByRole(users, searchTerm); // ✅ centralized
 
   return (
     <div className="app-container">
@@ -62,11 +49,11 @@ const App: React.FC = () => {
       <div className="app-container" style={{ paddingTop: "80px" }}>
         {loading ? (
           <div className="loader-overlay">
-            <div className="glass-loader"></div>
+            <div className="glass-loader">Loading</div>
           </div>
         ) : displayedUsers.length === 0 ? (
           <p style={{ textAlign: "center", marginTop: "40px" }}>
-            No users found matching your search.
+            {STRINGS.NO_USERS_FOUND}
           </p>
         ) : (
           <div className="grid">

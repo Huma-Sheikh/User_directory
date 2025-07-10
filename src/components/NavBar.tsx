@@ -1,5 +1,7 @@
 import React from "react";
 import "./NavBar.css";
+import { STRINGS } from "../utilis/string";
+import { handleSearchInputChange } from "../utilis/functions"; // ✅ import it
 
 interface NavbarProps {
   isModalOpen: boolean;
@@ -12,16 +14,16 @@ const Navbar: React.FC<NavbarProps> = ({ isModalOpen, onSearchChange }) => {
   return (
     <nav className="top-navbar">
       <div className="navbar-left">
-        <h2>🧾User Directory</h2>
+        <h2>{STRINGS.APP_TITLE}</h2>
       </div>
 
       <div className="navbar-right">
         <div className="search-wrapper">
           <input
             type="text"
-            placeholder="Search by Role"
+            placeholder={STRINGS.SEARCH_PLACEHOLDER}
             className="search-input"
-            onChange={(e) => onSearchChange(e.target.value)}
+            onChange={(e) => handleSearchInputChange(e, onSearchChange)} // ✅ uses centralized handler
           />
         </div>
       </div>

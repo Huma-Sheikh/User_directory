@@ -1,11 +1,10 @@
+@import url('./utilis/theme.css'); 
 
 .app-container {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
   min-height: 100vh;
-  padding: 20px;
- 
-   
+  padding: var(--container-padding);
 }
 
 h1 {
@@ -17,7 +16,7 @@ h1 {
 .loader-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--overlay-bg);
   backdrop-filter: blur(6px);
   z-index: 9999;
   display: flex;
@@ -29,12 +28,12 @@ h1 {
 .glass-loader {
   width: 60px;
   height: 60px;
-  border: 6px solid rgba(255, 255, 255, 0.15);
-  border-top: 6px solid #ffffff;
+  border: 6px solid var(--glass-loader-border);
+  border-top: 6px solid var(--glass-loader-top);
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 12px var(--glass-loader-shadow);
+  background: var(--glass-loader-bg);
   backdrop-filter: blur(10px);
 }
 
@@ -48,11 +47,10 @@ h1 {
   }
 }
 
-
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 20px;
+  gap: var(--grid-gap);
+  padding: var(--container-padding);
 }

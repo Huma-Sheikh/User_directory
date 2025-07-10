@@ -1,0 +1,80 @@
+:root {
+  --font-family: 'Arial, sans-serif';
+  --heading-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ --font-family: 'Arial, sans-serif';
+  --bg-color: #f4f4f4;
+  --primary-white: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.3);
+  --glass-loader-border: rgba(255, 255, 255, 0.15);
+  --glass-loader-top: #ffffff;
+  --glass-loader-shadow: rgba(255, 255, 255, 0.3);
+  --glass-loader-bg: rgba(255, 255, 255, 0.05);
+  --container-padding: 20px;
+  --grid-gap: 30px;
+  --bg-color: #f4f4f4;
+  --navbar-bg: #111;
+  --navbar-text: #fff;
+  --search-bg: #1d1d1d;
+  --search-border: rgb(180, 175, 175);
+  --search-text: black;
+  --placeholder-color: black;
+
+  --box-shadow-soft: 0 4px 12px rgba(255, 255, 255, 0.1);
+  --box-shadow-strong: 0 4px 20px rgba(255, 255, 255, 0.08);
+
+  --padding-navbar: 16px 32px;
+  --padding-search: 4px 12px;
+  --border-radius-pill: 30px;
+  --border-radius-input: 25px;
+
+  --search-width: 280px;
+  --transition-smooth: all 0.3s ease;
+  --highlight-yellow: #facc15;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --card-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.4);
+
+  --role-bg: black;
+  --role-text: #fff;
+  --desc-color: #5a5050;
+  --join-bg: rgba(91, 83, 83, 0.06);
+  --join-text: #060505;
+  --join-label: #121e20;
+
+  --btn-gradient: linear-gradient(to right, #0f1212, #505654);
+  --btn-text: white;
+
+  --border-radius-xl: 20px;
+  --border-radius-lg: 12px;
+  --border-radius-full: 50%;
+
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 20px;
+
+  --mobile-breakpoint: 768px;
+    --modal-overlay-bg: rgba(0, 0, 0, 0.6);
+  --modal-bg: #fff;
+  --modal-border-radius: 12px;
+
+  --modal-left-bg: #f8f9fa;
+  --modal-left-heading: #111;
+  --modal-date-color: #666;
+  --modal-desc-color: #333;
+  --modal-email-bg: #fff3cd;
+  --modal-email-color: #444;
+
+  --modal-right-bg: #0f0f0f;
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --card-avatar-shadow: 0 0 12px rgba(245, 243, 243, 0.4);
+
+  --animation-zoomIn: zoomIn;
+
+  --font-size-title: 32px;
+  --font-size-normal: 14px;
+  --font-size-sm: 13px;
+
+  --modal-gap: 30px;
+  --modal-padding: 40px;
+}
